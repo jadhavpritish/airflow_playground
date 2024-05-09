@@ -14,4 +14,8 @@ init: clean
 	poetry run pip install --upgrade pip
 
 	@# If you are having problems running this on Big Sur, try prepending the following:  SYSTEM_VERSION_COMPAT=1
-	poetry install 
+	poetry install
+
+format:
+	poetry run isort .
+	poetry run black .
