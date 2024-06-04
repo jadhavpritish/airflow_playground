@@ -9,6 +9,8 @@ clean: ## Clean
 	# git gc is really just minor tidying - https://git-scm.com/docs/git-gc
 	git gc --aggressive
 
+	poetry env remove $(poetry env list)
+
 
 init: clean
 	poetry run pip install --upgrade pip
